@@ -1,0 +1,12 @@
+# Render Blueprint: "New +" -> "Blueprint" -> pick this repo. Or create a Web Service by hand (see README).
+services:
+  - type: web
+    name: ludo-mayhem
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 20

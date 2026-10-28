@@ -1,0 +1,25 @@
+{
+  "name": "ludo-mayhem",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "LUDO MAYHEM: multiplayer Ludo for 2-10 players (online rooms + offline pass-and-play)",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node --watch server/index.js",
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "test": "node --test",
+    "icons": "python3 scripts/make-icons.py"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "vite": "^5.4.11",
+    "@vitejs/plugin-react": "^4.3.4"
+  }
+}
